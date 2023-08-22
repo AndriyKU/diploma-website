@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --color-decoration: #609cf5;
+  --color-title: #212325;
+  --color-paragraph: #494c4d;
+  --color-border-hr: silver;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  color: var(--color-paragraph);
+  background-color: #fff;
+}
+
+p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--color-title);
+}
+
+button {
+  text-transform: uppercase;
+  color: var(--color-decoration);
+  border: 2px solid var(--color-decoration);
+  border-radius: 5px;
+  padding: 15px 30px;
+  background-color: #fff;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.5s ease-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #e9f5fc;
+}
+
+.smallButton {
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 30px;
+}
+
+main .secondary h2::after, aside h2::after,
+.last h2::after, aside .help address .address-link:first-of-type::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 10px;
+  background-color: var(--color-decoration);
+}
+
+hr {
+  margin: 40px 0;
+  background-color: var(--color-border-hr);
+  border: 1px solid var(--color-border-hr);
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#global-block {
+  width: 80%;
+  flex-grow: 1;
+  order: 1;
+}
+
+aside {
+  /* display: none; */
+  width: 20%;
+  background-color: #f6f7fb;
+  height: 100%;
+  overflow: hidden; /* для устройств с маленьким экраном */
+}
+
+#global-block header h2, #global-block main, #global-block .last {
+  margin-left: calc(2% + 36px);
+  margin-right: 3%;
+}
+
+#hide-menu {
+  font-size: 36px;
+  color: var(--color-decoration);
+  margin: 20px 1%;
+  cursor: pointer;
+}
+
+#global-block header h2 {
+  font-size: 16px;
+  border-bottom: 4px solid var(--color-decoration);
+  padding-bottom: 16px;
+}
+
+main .principal {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+main .principal h1 {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+main .principal #subtitle {
+  color: var(--color-title);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+main .principal .principal-block {width: 48%;}
+
+main .principal figure {
+  width: 48%;
+  align-self: center;
+  overflow: hidden;
+}
+
+main .principal figure img {width: 100%;}
+
+main .secondary {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 50px;
+}
+
+main .secondary h2 {
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+main .secondary h2::after {width: 350px;}
+
+main .secondary .secondary-block {
+  width: 46%;
+  border-bottom: 2px solid var(--color-border-hr);
+  padding-bottom: 30px;
+}
+
+main .secondary .secondary-block.border-right-gray {
+  width: calc(46% - 2px);
+  border-right: 2px solid silver;
+  padding-right: 6%;
+}
+
+main .secondary .secondary-block.paddingLeft {
+  padding-left: 2%;
+}
+
+main .secondary .secondary-block:nth-of-type(5),
+main .secondary .secondary-block:last-of-type {
+  border-bottom-width: 0;
+}
+
+main .secondary .secondary-block figure.marginTop {
+  margin-top: 30px;
+}
+
+main .secondary .secondary-block figure {
+   height: 197px;
+   overflow: hidden;
+}
+
+main .secondary .secondary-block figure img,
+main .principal figure img {
+  box-sizing: border-box;
+  padding: 1.5% 5%;
+  width: 110%;
+  height: 110%;
+  margin-left: -5%;
+  margin-top: -1.5%;
+  transition: all 1s ease-out;
+  cursor: pointer;
+}
+
+main .secondary .secondary-block figure img:hover,
+main .principal figure img:hover {
+  padding: 0;
+}
+
+main .secondary .secondary-block h3 {
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+main .third {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+main .third .third-block {
+  flex-basis: 18%;
+}
+main .third .third-block figure {
+  width: 100%;
+}
+
+main .third figure img {
+  width: 100%;
+  height: 144px;
+  box-shadow: 0 0 gray;
+  transition: box-shadow 0.5s ease-out;
+}
+main .third figure img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px 5px gray;
+}
+
+main .third h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.last {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 70px;
+}
+
+.last h2 {
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.last h2::after {
+  width: 160px;
+}
+
+.last figure {
+  width: 48px;
+  height: 48px;
+  align-self: center;
+}
+
+.last .last-block {
+  width: 40%;
+}
+
+.last .last-block h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.last .last-block p {margin-top: 20px; margin-bottom: 0;}
+
+.last figure .material-icons {
+  font-size: 48px;
+  color: var(--color-decoration);
+  cursor: pointer;
+}
+
+.last figure a #youtube-logo {
+  width: 48px;
+  fill: var(--color-decoration);
+}
+
+/* СSS стили для меню */
+
+aside header nav :not(form, input, li, a), aside .information, aside .help {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+form {
+  background-color: #edf1f2;
+  padding: 20px;
+}
+input[type="search"] {
+  width: 100%;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #91969a;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+
+input[type="search"]:focus {
+  outline-style: none;
+  border-color: var(--color-decoration);
+  color: var(--color-decoration);
+  background-color: #fff;
+  font-weight: 700;
+}
+
+aside header {
+  margin-bottom: 40px;
+}
+
+aside header nav h2 {
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+aside header nav h2::after {
+  width: 60px;
+  margin-top: 7px;
+}
+
+aside header nav ul {
+  list-style-type: none;
+}
+
+aside header nav ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid silver;
+}
+
+nav a {
+  font-size: 12px;
+  color: var(--color-title);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.5s ease;
+}
+
+nav a:hover {
+  color: var(--color-decoration);
+}
+
+aside .information h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+aside .information h2::after {
+  width: 170px;
+  margin-top: 7px;
+}
+
+aside .information figure {
+  width: 100%;
+  height: 96px;
+}
+
+aside .information figure img {
+  width: 100%;
+}
+
+aside .information figure img {
+  box-sizing: border-box;
+  padding: 0.5% 1%;
+  width: 102%;
+  height: 101%;
+  margin-left: -1%;
+  margin-top: -0.5%;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+aside .information figure img:hover {
+  padding: 0;
+}
+
+aside .information p {font-size: 14px;}
+
+
+aside .help h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+aside .help h2::after {
+  width: 70px;
+  margin-top: 7px;
+}
+
+aside .help p {font-size: 14px;}
+
+aside .help address .material-icons {
+  font-size: 24px;
+  color: var(--color-decoration);
+  vertical-align: top;
+}
+aside .help address .address-link {
+  display: inline-block;
+  width: calc(100% - 48px);
+  font-size: 14px;
+  color: var(--color-paragraph);
+  text-decoration: none;
+  margin-left: 20px;
+  font-style: normal;
+  transition: all 0.5s ease;
+}
+
+aside .help address .address-link:first-of-type::after {
+  width: 115px;
+  background-color: var(--color-border-hr);
+  margin-top: 0;
+}
+
+aside .help address .address-link:hover {
+  color: var(--color-decoration);
+}
+aside .help address .address-link:first-of-type:hover::after {
+  background-color: var(--color-decoration);
+}
+
+aside .help p#copyright {font-style: normal;}
+
+/* Aдаптивный дизайн для планшетов и мобильных телефонов */
+@media screen and (max-width: 768px) {
+  #global-block header h2, #global-block main, #global-block .last {
+    margin-left: 2%;
+  }
+  main .secondary h2::after, .last h2::after, aside header nav h2::after,
+  aside .information h2::after, aside .help h2::after {
+    width: 100%;
+  }
+
+  main .principal, main .secondary, .last {
+    flex-direction: column;
+  }
+  main .principal .principal-block, main .principal figure {
+   width: 100%;
+ }
+ main .principal figure {
+   margin-bottom: 50px;
+   order: -1;
+   /* height: 100px; */
+ }
+
+ main .secondary .secondary-block {
+   width: 100%;
+ }
+
+ main .secondary .secondary-block.border-right-gray {
+   width: 100%;
+   border-right-width: 0;
+   padding-right: 0;
+ }
+
+ main .secondary .secondary-block.paddingLeft {
+   padding-left: 0;
+ }
+
+ main .secondary .secondary-block:first-of-type,
+ main .secondary .secondary-block:nth-of-type(2) {
+   margin-top: 30px;
+ }
+
+ main .secondary .secondary-block:nth-of-type(5) {
+   border-bottom: 2px solid var(--color-border-hr);
+   padding-bottom: 30px;
+ }
+
+ main .third .third-block {
+   flex-basis: 49%;
+   margin-bottom: 30px;
+ }
+ .last h2 {
+   margin-bottom: 0;
+ }
+ .last .last-block {
+   width: 100%;
+ }
+ .last figure {
+   align-self: flex-start;
+   margin: 30px 0;
+ }
+}
